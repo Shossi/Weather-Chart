@@ -1,0 +1,23 @@
+registrySecretName: my-docker-secret
+
+replicaCount: 2
+weatherApp:
+  image:
+    repository: yossizxc/weather
+    pullPolicy: IfNotPresent
+    tag: 912cc1
+  service:
+    type: LoadBalancer
+    port: 80
+    targetPort: 5000
+
+
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+
+
+ingressController:
+  enabled: false
