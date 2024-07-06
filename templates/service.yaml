@@ -9,5 +9,4 @@ spec:
       - protocol: TCP
         port: {{ .Values.weatherApp.service.port }}
         targetPort: {{ .Values.weatherApp.service.targetPort }}
-        nodePort: {{ .Values.weatherApp.service.nodePort }}
   type: {{ .Values.weatherApp.service.type }}
