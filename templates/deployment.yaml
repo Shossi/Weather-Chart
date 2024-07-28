@@ -23,6 +23,13 @@ spec:
           imagePullPolicy: {{ .Values.weatherApp.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.weatherApp.service.targetPort }}
+          resources:
+              requests:
+                cpu: "100m"
+                memory: "200Mi"
+              limits:
+                cpu: "500m"
+                memory: "500Mi"
           env:
             - name: BG_COLOR
               valueFrom:

@@ -18,6 +18,8 @@ serviceAccount:
   annotations: {}
   name: ""
 
-
-ingressController:
-  enabled: false
+hpa:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
