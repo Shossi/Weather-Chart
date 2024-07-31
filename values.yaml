@@ -11,6 +11,14 @@ weatherApp:
     port: 80
     targetPort: 5000
 
+resources:
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  limits:
+    cpu: 500m
+    memory: 500Mi
+
 
 serviceAccount:
   create: true
