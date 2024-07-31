@@ -25,11 +25,11 @@ spec:
             - containerPort: {{ .Values.weatherApp.service.targetPort }}
           resources:
               requests:
-                cpu: "100m"
-                memory: "200Mi"
+                cpu: {{ .Values.resources.requests.cpu  }}
+                memory: {{ .Values.resources.requests.memory  }}
               limits:
-                cpu: "500m"
-                memory: "500Mi"
+                cpu: {{ .Values.resources.limits.cpu  }}
+                memory: {{ .Values.resources.limits.memory  }}
           env:
             - name: BG_COLOR
               valueFrom:
