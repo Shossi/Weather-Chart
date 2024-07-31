@@ -7,7 +7,7 @@ weatherApp:
     pullPolicy: IfNotPresent
     tag: 3.3.0.222
   service:
-    type: LoadBalancer
+    type: ClusterIP
     port: 80
     targetPort: 5000
 
