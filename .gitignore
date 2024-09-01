@@ -1,0 +1,9 @@
+*
+
+!/.gitignore
+
+!Chart.yaml
+!values.yaml
+!templates/
+!templates/*.yaml
+!templates/_helpers.tpl
